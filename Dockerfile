@@ -2,6 +2,7 @@ FROM node
 
 RUN npm install -g npm
 RUN npm install -g aws-cdk typescript
+RUN apt-get update && apt-get -y --no-install-recommends install groff
 
 RUN curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip" && \
     unzip awscliv2.zip && \
